@@ -188,7 +188,7 @@ hal_uart_status_t log_uart_init(hal_uart_port_t port)
     hal_uart_status_t ret;
 
     /* Configure UART PORT */
-    uart_config.baudrate = HAL_UART_BAUDRATE_115200;
+    uart_config.baudrate = HAL_UART_BAUDRATE_921600; /* luvinland. Modify uart baudrate for system performance impprovements. */
     uart_config.parity = HAL_UART_PARITY_NONE;
     uart_config.stop_bit = HAL_UART_STOP_BIT_1;
     uart_config.word_length = HAL_UART_WORD_LENGTH_8;
