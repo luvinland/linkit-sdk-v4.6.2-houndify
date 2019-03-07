@@ -282,7 +282,7 @@ static unsigned int mbedtls_get_current_count(void)
         return 0;
     }
     
-    printf("[%s:%d]get count, count = %d \n", __FUNCTION__, __LINE__, (int)count);
+    /*printf("[%s:%d]get count, count = %d \n", __FUNCTION__, __LINE__, (int)count);*/ /* luvinland. Ignore mbedtls printf message in normal case. */
     return count;
 }
 
