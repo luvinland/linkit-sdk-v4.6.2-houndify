@@ -1,0 +1,143 @@
+/* Copyright Statement:
+ *
+ * (C) 2005-2016 MediaTek Inc. All rights reserved.
+ *
+ * This software/firmware and related documentation ("MediaTek Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to MediaTek Inc. ("MediaTek") and/or its
+ * licensors. Without the prior written permission of MediaTek and/or its 
+ * licensors, any reproduction, modification, use or disclosure of MediaTek
+ * Software, and information contained herein, in whole or in part, shall be
+ * strictly prohibited. You may only use, reproduce, modify, or distribute 
+ * (as applicable) MediaTek Software if you have agreed to and been bound by
+ * the applicable license agreement with MediaTek ("License Agreement") and
+ * been granted explicit permission to do so within the License Agreement
+ * ("Permitted User"). If you are not a Permitted User, please cease any
+ * access or use of MediaTek Software immediately. 
+ */
+
+/**
+ * @addtogroup mt2523_watch mt2523_watch
+ * @{
+ * @addtogroup mt2523_watch apps
+ * @{
+ * @addtogroup mt2523_watch_apps_watch_ref_design watch_ref_design
+ * @{
+
+@par Overview
+  - Application description
+    - This application demonstrates how to create a graphical user interface
+      (GUI) on an embedded system with limited resources using TouchGFX
+      framework written in C++. The embedded system in this project is a
+      watch based on MediaTek MT2523 SOC and LinkIt for RTOS development
+      platform.
+  - Application features
+    - Three clocks, including two analog clocks and one digital clock.
+    - GNSS. Measures and displays location information continuously.
+    - Bluetooth Notification. Receives and displays notifications from Android and
+      iOS devices.
+    - Heart Rate. Provides heart rate using MediaTek MT2511 biosensor
+      daughterboard.
+    - Settings. Enables to configure the clock, date/time, GNSS, Bluetooth,
+      sensor heart rate and backlight (on or off).
+    - Sports Mode. Integrates GNSS location, heart rate and accelerometer
+      data to provide sports mode.
+  - TouchGFX License
+    - Please refer to http://touchgfx.com/en/services-pricing/licenses/.
+    - Current project uses Roboto fonts that can be found at Source Sans Pro
+      https://www.fontsquirrel.com/license/source-sans-pro.
+
+@par Hardware and software environment
+  - Supported platform
+    - Watch based on MediaTek MT2523 SOC and LinkIt for RTOS development
+      platform.
+    - LCM module driven by Raydium RM69080 (or another driver IC that
+      supports MIPI DSI interface).
+    - CTP module driven by ITE7258 (supports I2C interface).
+  - TouchGFX development environment: Linux. 
+    - TouchGFX requires Ruby to generate resource files in Linux environment, 
+      which is installed on most Linux distributions, by default. 
+    - Determine if Ruby is installed and, if not, install it according to the
+      instructions at http://ruby.about.com/od/tutorials/ht/installrubylin.htm. 
+      Default version is ruby 1.9.3p484 (2013-11-22 revision 43786). In addition,
+      download rubyzip from https://github.com/rubyzip/rubyzip. 
+    - Download roo from https://github.com/roo-rb/roo. 
+    - Download nokogiri from http://www.nokogiri.org/tutorials/installing_nokogiri.html.  
+    - Export Ruby environment: export
+      RUBYLIB=/intall_path/nokogiri-master/:
+      /intall_path/nokogiri-master/1.9.1/x86_64-linux/:
+      /intall_path/rubyzip-master/lib/:/intall_path/roo-master/lib/.
+  - TouchGFX development environment: Windows.
+    - Download and install rubyinstaller.exe from
+      https://www.ruby-lang.org/en/documentation/installation/#rubyinstaller
+      (default is 2.3.1 x64 version). 
+    - Download and unzip Rubygems from https://rubygems.org/pages/download (default is rubygems-2.6.8.zip). 
+    - From Windows command window: cd install_path/rubygems-2.6.8 
+    - Execute ruby: setup.rb install 
+    - Open MinGW console 
+    - Install roo package with a command: gem install roo 
+    - Install rubyzip package with a command: gem install rubyzip 
+    - Install nokogiri package with a command: gem install nokogiri
+
+@par Directory contents
+  - Source and header files
+    - \b inc:                  Common header files.
+    - \b src/gnss_demo:        GNSS demo source code.
+    - \b src/battery:          Battery source code.
+    - \b src/Notification:     Android and ANCS notifications.
+    - \b src/sensor_demo:      Sensor algorithm demo source code.
+    - \b src/touch_adapter:    Touch adapter for TouchGFX.
+    - \b src/ui:               TouchGFX UI application and assets.
+    - \b src/main.cpp:         Main program.
+    - \b src/sys_init.c:       This file initializes the system, including
+                               system clock, UART port for logging, PinMux,
+                               cache and other necessary hardware.
+    - \b src/ept_gpio_var.c:   The GPIO configuration file generated by the
+                               Easy Pinmux Tool (EPT).
+    - \b src/ept_eint_var.c:   The EINT configuration file generated by the
+                               EPT.
+    - \b src/system_mt2523.c:  The configuration file of the Cortex-M4 with
+                               floating point unit MCU core registers and system clock.
+    - \b src/task_def.c:       Task definition file.
+    - \b src/bt_init.c:        This file includes Bluetooth initialization
+                               example code.
+    - \b src/gatt_service.c:   GATT and GAP service file.
+    - \b src/hci_log.c:        Display HCI log.
+  - Project configuration files using GCC
+    - \b GCC/feature.mk:        Feature configuration file.
+    - \b Makefile:              Makefile.
+    - \b GCC/flash.ld:          Linker script.
+    - \b GCC/gnss_demo.mk:      GNSS application makefile.
+    - \b GCC/sensor_demo.mk:    Sensor algorithm application makefile.
+    - \b GCC/syscalls.c:        MT2523x syscalls for GCC.
+    - \b GCC/startup_mt2523.s:  MT2523x startup file for GCC.
+  - Project configuration files using Keil IDE
+    - \b MDK-ARM/watch_ref_design.uvoptx:
+      uVision5 Project File. Contains the project structure in XML format.
+    - \b MDK-ARM/watch_ref_design.uvprojx:
+      uVision5 project options. Contains the settings for the debugger, trace
+      configuration, breakpoints, currently open files, etc.
+
+@par Run the application
+  - How to build the watch_demo application
+    - GCC version
+      - make command "./build.sh mt2523_watch watch_ref_design" under the
+        SDK root folder.
+    - Keil IDE using version MDK515
+      - Open "watch_demo.uvprojx" under the MDK-ARM folder and build the Keil
+        project.
+  - How to download the watch_demo application
+    - Please install and use MT2523 Flash
+      Tool(sdk_root/tools/PC_tool_Win.zip) to download watch_demo.bin to the
+      watch.
+  - How to run each feature
+    - Power on the watch and the clock will be displayed. Press power key
+      to switch between the heart rate, GNSS, sports mode or settings
+      screens. On Settings, press the power key to open the detailed
+      settings. Press the power key again, to return to the previous display.
+*/
+/**
+ * @}
+ * @}
+ * @}
+ */

@@ -1,0 +1,189 @@
+/* Copyright Statement:
+ *
+ * (C) 2005-2016  MediaTek Inc. All rights reserved.
+ *
+ * This software/firmware and related documentation ("MediaTek Software") are
+ * protected under relevant copyright laws. The information contained herein
+ * is confidential and proprietary to MediaTek Inc. ("MediaTek") and/or its licensors.
+ * Without the prior written permission of MediaTek and/or its licensors,
+ * any reproduction, modification, use or disclosure of MediaTek Software,
+ * and information contained herein, in whole or in part, shall be strictly prohibited.
+ * You may only use, reproduce, modify, or distribute (as applicable) MediaTek Software
+ * if you have agreed to and been bound by the applicable license agreement with
+ * MediaTek ("License Agreement") and been granted explicit permission to do so within
+ * the License Agreement ("Permitted User").  If you are not a Permitted User,
+ * please cease any access or use of MediaTek Software immediately.
+ * BY OPENING THIS FILE, RECEIVER HEREBY UNEQUIVOCALLY ACKNOWLEDGES AND AGREES
+ * THAT MEDIATEK SOFTWARE RECEIVED FROM MEDIATEK AND/OR ITS REPRESENTATIVES
+ * ARE PROVIDED TO RECEIVER ON AN "AS-IS" BASIS ONLY. MEDIATEK EXPRESSLY DISCLAIMS ANY AND ALL
+ * WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT.
+ * NEITHER DOES MEDIATEK PROVIDE ANY WARRANTY WHATSOEVER WITH RESPECT TO THE
+ * SOFTWARE OF ANY THIRD PARTY WHICH MAY BE USED BY, INCORPORATED IN, OR
+ * SUPPLIED WITH MEDIATEK SOFTWARE, AND RECEIVER AGREES TO LOOK ONLY TO SUCH
+ * THIRD PARTY FOR ANY WARRANTY CLAIM RELATING THERETO. RECEIVER EXPRESSLY ACKNOWLEDGES
+ * THAT IT IS RECEIVER'S SOLE RESPONSIBILITY TO OBTAIN FROM ANY THIRD PARTY ALL PROPER LICENSES
+ * CONTAINED IN MEDIATEK SOFTWARE. MEDIATEK SHALL ALSO NOT BE RESPONSIBLE FOR ANY MEDIATEK
+ * SOFTWARE RELEASES MADE TO RECEIVER'S SPECIFICATION OR TO CONFORM TO A PARTICULAR
+ * STANDARD OR OPEN FORUM. RECEIVER'S SOLE AND EXCLUSIVE REMEDY AND MEDIATEK'S ENTIRE AND
+ * CUMULATIVE LIABILITY WITH RESPECT TO MEDIATEK SOFTWARE RELEASED HEREUNDER WILL BE,
+ * AT MEDIATEK'S OPTION, TO REVISE OR REPLACE MEDIATEK SOFTWARE AT ISSUE,
+ * OR REFUND ANY SOFTWARE LICENSE FEES OR SERVICE CHARGE PAID BY RECEIVER TO
+ * MEDIATEK FOR SUCH MEDIATEK SOFTWARE AT ISSUE.
+ */
+
+
+const char BSP_GNSS_POWER_PIN = 1;
+const char BSP_GNSS_POWER_PIN_M_GPIO = 0;
+const char BSP_GNSS_POWER_PIN_M_EINT = 1;
+const char BSP_GNSS_POWER_PIN_M_AUXADCIN_1 = 2;
+const char BSP_GNSS_POWER_PIN_M_U2TXD = 3;
+const char BSP_GNSS_POWER_PIN_M_PWM1 = 4;
+const char BSP_GNSS_POWER_PIN_M_MA_SPI1_A_SCK = 5;
+const char BSP_GNSS_POWER_PIN_M_MA_EDIDI = 6;
+const char BSP_GNSS_POWER_PIN_M_MA_SPI0_A_SCK = 7;
+const char BSP_GNSS_POWER_PIN_M_DEBUGMON12 = 8;
+const char BSP_GNSS_POWER_PIN_M_BTDBGACKN = 9;
+
+
+const char UPDATE_HOST_STATUS_PIN = 4;
+const char UPDATE_HOST_STATUS_PIN_M_GPIO = 0;
+const char UPDATE_HOST_STATUS_PIN_M_EINT = 1;
+const char UPDATE_HOST_STATUS_PIN_M_MC1_A_CK = 2;
+const char UPDATE_HOST_STATUS_PIN_M_SLA_EDIDO = 3;
+const char UPDATE_HOST_STATUS_PIN_M_U1RXD = 6;
+const char UPDATE_HOST_STATUS_PIN_M_MA_SPI0_B_CS = 7;
+
+
+const char QUERY_MODEM_STATUS_PIN = 5;
+const char QUERY_MODEM_STATUS_PIN_M_GPIO = 0;
+const char QUERY_MODEM_STATUS_PIN_M_EINT = 1;
+const char QUERY_MODEM_STATUS_PIN_M_MC1_A_CM0 = 2;
+const char QUERY_MODEM_STATUS_PIN_M_SLA_EDIDI = 3;
+const char QUERY_MODEM_STATUS_PIN_M_U1TXD = 6;
+const char QUERY_MODEM_STATUS_PIN_M_MA_SPI0_B_SCK = 7;
+
+
+const char NOTIFY_MODEM_EXCEPTION_PIN = 8;
+const char NOTIFY_MODEM_EXCEPTION_PIN_M_GPIO = 0;
+const char NOTIFY_MODEM_EXCEPTION_PIN_M_EINT = 1;
+const char NOTIFY_MODEM_EXCEPTION_PIN_M_MC1_A_DA2 = 2;
+const char NOTIFY_MODEM_EXCEPTION_PIN_M_SCL2 = 6;
+
+
+const char TRIGGER_MODEM_RESET_PIN = 9;
+const char TRIGGER_MODEM_RESET_PIN_M_GPIO = 0;
+const char TRIGGER_MODEM_RESET_PIN_M_EINT = 1;
+const char TRIGGER_MODEM_RESET_PIN_M_MC1_A_DA3 = 2;
+const char TRIGGER_MODEM_RESET_PIN_M_SDA2 = 6;
+
+
+const char BSP_WIFI_32K_PIN = 14;
+const char BSP_WIFI_32K_PIN_M_GPIO = 0;
+const char BSP_WIFI_32K_PIN_M_EINT = 1;
+const char BSP_WIFI_32K_PIN_M_CLKO = 2;
+const char BSP_WIFI_32K_PIN_M_MA_EDICK = 3;
+const char BSP_WIFI_32K_PIN_M_MA_SPI1_B_MISO = 4;
+const char BSP_WIFI_32K_PIN_M_PWM3 = 5;
+const char BSP_WIFI_32K_PIN_M_SLA_EDICK = 6;
+
+
+const char HAL_KEYPAD_COL1_PIN = 19;
+const char HAL_KEYPAD_COL1_PIN_M_GPIO = 0;
+const char HAL_KEYPAD_COL1_PIN_M_KCOL1 = 1;
+const char HAL_KEYPAD_COL1_PIN_M_EINT = 2;
+const char HAL_KEYPAD_COL1_PIN_M_U0RTS = 3;
+const char HAL_KEYPAD_COL1_PIN_M_SCL2 = 4;
+const char HAL_KEYPAD_COL1_PIN_M_TRACEDATA1 = 5;
+const char HAL_KEYPAD_COL1_PIN_M_DEBUGMON2 = 7;
+const char HAL_KEYPAD_COL1_PIN_M_JTMS = 8;
+const char HAL_KEYPAD_COL1_PIN_M_BTJTMS = 9;
+
+
+const char HAL_KEYPAD_ROW1_PIN = 22;
+const char HAL_KEYPAD_ROW1_PIN_M_GPIO = 0;
+const char HAL_KEYPAD_ROW1_PIN_M_KROW1 = 1;
+const char HAL_KEYPAD_ROW1_PIN_M_U1TXD = 2;
+const char HAL_KEYPAD_ROW1_PIN_M_U3TXD = 3;
+const char HAL_KEYPAD_ROW1_PIN_M_TRACEDATA2 = 5;
+const char HAL_KEYPAD_ROW1_PIN_M_TRACE_SWV = 6;
+const char HAL_KEYPAD_ROW1_PIN_M_DEBUGMON5 = 7;
+const char HAL_KEYPAD_ROW1_PIN_M_JTDO = 8;
+const char HAL_KEYPAD_ROW1_PIN_M_BTDBGIN = 9;
+
+
+const char NOTIFY_MODEM_WAKEUP_PIN = 24;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_GPIO = 0;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_CMRST = 1;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_LSRSTB = 2;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_CLKO = 3;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_EINT = 4;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_GPCOUNTER_0 = 5;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_JTDI = 6;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_DEBUGMON10 = 7;
+const char NOTIFY_MODEM_WAKEUP_PIN_M_MC1_B_DA3 = 8;
+
+
+const char TRIGGER_MODEM_START_PIN = 25;
+const char TRIGGER_MODEM_START_PIN_M_GPIO = 0;
+const char TRIGGER_MODEM_START_PIN_M_CMPDN = 1;
+const char TRIGGER_MODEM_START_PIN_M_LSCK1 = 2;
+const char TRIGGER_MODEM_START_PIN_M_DAICLK = 3;
+const char TRIGGER_MODEM_START_PIN_M_MA_SPI2_A_CS = 4;
+const char TRIGGER_MODEM_START_PIN_M_MA_SPI3_A_CS = 5;
+const char TRIGGER_MODEM_START_PIN_M_JTMS = 6;
+const char TRIGGER_MODEM_START_PIN_M_DEBUGMON11 = 7;
+const char TRIGGER_MODEM_START_PIN_M_MC1_B_DA2 = 8;
+const char TRIGGER_MODEM_START_PIN_M_SLV_SPI0_CS = 9;
+
+
+const char TRIGGER_MODEM_WAKEUP_PIN = 29;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_GPIO = 0;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_CMCSK = 1;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_LPTE = 2;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_CMCSD2 = 4;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_EINT = 5;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_DEBUGMON15 = 7;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_MC1_B_DA1 = 8;
+const char TRIGGER_MODEM_WAKEUP_PIN_M_BT_RGPIO2 = 9;
+
+
+const char BSP_WIFI_26M_PIN = 45;
+const char BSP_WIFI_26M_PIN_M_GPIO = 0;
+const char BSP_WIFI_26M_PIN_M_SRCLKENAI = 1;
+
+
+const char BSP_WIFI_RESET_PIN = 46;
+const char BSP_WIFI_RESET_PIN_M_GPIO = 0;
+const char BSP_WIFI_RESET_PIN_M_MA_SPI0_CS1 = 1;
+const char BSP_WIFI_RESET_PIN_M_DEBUGMON1 = 7;
+
+
+const char BSP_WIFI_ENABLE_PIN = 48;
+const char BSP_WIFI_ENABLE_PIN_M_GPIO = 0;
+const char BSP_WIFI_ENABLE_PIN_M_MA_SPI3_CS1 = 1;
+const char BSP_WIFI_ENABLE_PIN_M_DEBUGMON5 = 7;
+
+
+
+/*Output for default variable names*/
+/*@XXX_XX_PIN in gpio.cmp          */
+
+const char HAL_KEYPAD_COL2_PIN = 0xff;
+const char HAL_KEYPAD_COL0_PIN = 0xff;
+const char HAL_KEYPAD_ROW2_PIN = 0xff;
+const char HAL_KEYPAD_ROW0_PIN = 0xff;
+const char BSP_CTP_SCL_PIN = 0xff;
+const char BSP_CTP_SDA_PIN = 0xff;
+const char BSP_CTP_RST_PIN = 0xff;
+const char BSP_CTP_EINT_PIN = 0xff;
+const char BSP_SPEAKER_EBABLE_PIN = 0xff;
+const char BSP_AUXADC_ENABLE_PIN = 0xff;
+const char BSP_BIO_SENSOR_PPG_VDRV_EN = 0xff;
+const char BSP_BIO_SENSOR_32K = 0xff;
+const char BSP_BIO_SENSOR_RST_PORT_PIN = 0xff;
+const char BSP_BIO_SENSOR_AFE_PWD_PIN = 0xff;
+
+
+
+

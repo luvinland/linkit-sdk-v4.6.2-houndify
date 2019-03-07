@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"Y:\Yuan\new_mp3_official\gva\project\mt7686_hdk\apps\iot_sdk_demo\EWARM\..\..\..\..\..\out_iar\mt7686_hdk\iot_sdk_demo\Debug\Exe\iot_sdk_demo.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--macro "Y:\Yuan\new_mp3_official\gva\project\mt7686_hdk\apps\iot_sdk_demo\EWARM\..\..\..\..\..\tools\iar\mt7686\FlashMT7686.mac" 
+
+--flash_loader "Y:\Yuan\new_mp3_official\gva\project\mt7686_hdk\apps\iot_sdk_demo\EWARM\..\..\..\..\..\tools\iar\mt7686\FlashMT7686.board" 
+
+
+
+

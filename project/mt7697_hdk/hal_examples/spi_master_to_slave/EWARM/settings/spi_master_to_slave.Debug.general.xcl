@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armJET.dll" 
+
+"Z:\Documents\maindev3\gva\out_iar\mt7697_hdk\spi_master_to_slave\Exe\spi_master_to_slave.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\arm\bin\armbat.dll" 
+
+--macro "Z:\Documents\maindev3\gva\project\mt7697_hdk\hal_examples\spi_master_to_slave\EWARM\..\..\..\..\..\tools\iar\mt7687\FlashMT7687.mac" 
+
+--flash_loader "Z:\Documents\maindev3\gva\project\mt7697_hdk\hal_examples\spi_master_to_slave\EWARM\..\..\..\..\..\tools\iar\mt7687\FlashMT7687.board" 
+
+
+
+

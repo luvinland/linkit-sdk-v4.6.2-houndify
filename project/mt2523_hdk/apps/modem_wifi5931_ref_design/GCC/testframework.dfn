@@ -1,0 +1,56 @@
+#case output
+project/common/test_cases/test_framework
+project/common/test_cases/sensor_subsys
+project/common/test_cases/hb_ble
+project/common/test_cases/MTBF/hb_ble
+project/common/test_cases/hb_duo
+
+project/common/test_cases/MTBF/environment
+project/common/test_cases/MTBF/nvdm
+project/common/test_cases/MTBF/Sample
+#project/mt2523_hdk/test_cases/gnss_testcase
+project/mt2523_hdk/test_cases/battery_management_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/rtc_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/accdet_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/adc_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/audio_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/cache_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/charger_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/dac_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/dvfs_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/eint_it_testcase
+#project/mt2523_hdk/test_cases/hal_it_testcase/fatfs_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/gdma_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/g2d_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/gpio_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/gpt_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/i2c_master_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/i2s_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/pwm_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/spi_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/trng_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/uart_it_testcase
+project/mt2523_hdk/test_cases/hal_it_testcase/nvdm_it_testcase
+#project/mt2523_hdk/test_cases/MTBF/fatfs
+#project/mt2523_hdk/test_cases/MTBF/gnss
+#CFLAGS
+TF_PLATFORM=2523
+CFLAGS +=-DTF_COMPILE_IN_2523
+#CFLAGS +=-DSUPPORT_BTBLE_TEST_CASE=1
+#CFLAGS +=-DSUPPORT_BTEDR_TEST_CASE=1
+CFLAGS +=-DSUPPORT_HAL_TEST_CASE=1
+CFLAGS +=-DSUPPORT_HAL_RTC_TEST=1
+CFLAGS +=-DSUPPORT_HAL_CHARGER_TEST_CASE=1
+#CFLAGS +=-DSUPPORT_FATFS_TEST_CASE=1
+#CFLAGS +=-DSUPPORT_SENSOR_TEST_CASE=1
+#CFLAGS +=-DSUPPORT_INET_TEST_CASE=1
+CFLAGS +=-DSUPPORT_GNSS_TEST_CASE=1
+CFLAGS +=-DTF_SPECIFIED_PORT=2
+CFLAGS +=-DSUPPORT_BATTERY_TEST_CASE=1
+CFLAGS +=-DSUPPORT_NVDM_TEST_CASE=1
+CFLAGS +=-DTF_SUPPORT_MTBF_FEATURE
+CFLAGS +=-DHAL_SLEEP_MANAGER_ENABLED
+CFLAGS +=-DHAL_DVFS_MODULE_ENABLED
+CFLAGS +=-DHAL_SLEEP_MANAGER_ENABLED=1
+CFLAGS +=-DSUPPORT_HB_BTBLE_TEST_CASE=1
+#CFLAGS END
