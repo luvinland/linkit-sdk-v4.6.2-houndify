@@ -85,9 +85,9 @@ typedef u32_t sys_prot_t;
 #endif
 
 #ifndef LWIP_DEBUG_USE_PRINTF
-#define LWIP_LOGE(fmt,arg...)   LOG_E(lwip, "[lwip]: " fmt, ##arg)
-#define LWIP_LOGW(fmt,arg...)   LOG_W(lwip, "[lwip]: " fmt, ##arg)
-#define LWIP_LOGI(fmt,arg...)   LOG_I(lwip ,"[lwip]: " fmt, ##arg)
+#define LWIP_LOGE(fmt,arg...)   LOG_E(lwip, "[lwip]: "fmt,##arg)
+#define LWIP_LOGW(fmt,arg...)   LOG_W(lwip, "[lwip]: "fmt,##arg)
+#define LWIP_LOGI(fmt,arg...)   LOG_I(lwip ,"[lwip]: "fmt,##arg)
 #endif
 
 #ifdef LWIP_DEBUG_USE_PRINTF
