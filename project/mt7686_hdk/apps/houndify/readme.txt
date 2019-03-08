@@ -21,15 +21,25 @@
  * @{
  * @addtogroup mt7686_hdk_apps apps
  * @{
- * @addtogroup mt7686_hdk_apps_houndify houndify
+ * @addtogroup mt7686_hdk_apps_nghttp2 nghttp2
   * @{
 
 @par Overview
   - Application description
-    - This application is a simple program which run Houndify AI platform.
+    - This application is a simple demonstration program which shows how to
+      use the nghttp2 APIs.
   - Features of the example project
+    - This example demonstrates a http/2 client which connect with a web
+      server based mbedtls, which will fallback http/1.1 if the server does
+      not support http/2.
+    - This application explain user to how to:
+    - 1. Connect to a web server based http/2 and mbedtls
+    - 2. Get homepage from server
+    - 3. Disconnect with server
+    - 4. Connect to server and get homepage based http/1.1, if server does
+      not support http/2
   - Results
-    - "Alexa" voice trigger, "Hi" voice command, "Yo" cloud voice out.
+    - The transaction output is collected in a log.
 
 @par Hardware and software environment
   - Supported platform
@@ -50,10 +60,10 @@
         for data logging through UART. For the installation details, please
         refer to section "Installing Tera terminal on Microsoft Windows" on
         the "LinkIt for RTOS Get Started Guide" in [sdk_root]/doc folder.
-      - COM port settings. baudrate: 921600, data bits: 8, stop bit: 1,
+      - COM port settings. baudrate: 115200, data bits: 8, stop bit: 1,
         parity: none and flow control: off.
       - Configure a Wi-Fi router with the SSID as SQA_TEST_AP, password as
-        {modify}, and authentication mode as WPA_PSK_WPA2_PSK. The Wi-Fi
+        77777777, and authentication mode as WPA_PSK_WPA2_PSK. The Wi-Fi
         router should have the internet connection.
       - You can change the default settings in main.c to adapt the device to
         your Wi-Fi Accesss Point by specifying SSID and password.
@@ -61,6 +71,10 @@
 @par Directory contents
   - Source and header files.
     - \b src/main.c:              Main program file.
+    - \b src/nghttp2_client.c:    Connect to nghttp2 server.This file was
+                                  derived from https://nghttp2.org/, MediaTek
+                                  modified it to integrate it in this example
+                                  project.
     - \b src/system_mt7686.c:     The configuration file of the Cortex-M4 with
                                   floating point core registers and system
                                   clock.
@@ -77,6 +91,10 @@
                                   Pinmux Tool(EPT). Please do not edit the
                                   file.
     - \b inc/FreeRTOSConfig.h:    FreeRTOS feature configuration file.
+    - \b inc/nghttp2_client.h:    The header file of nghttp2_client.c.This file
+                                  was derived from https://nghttp2.org/,
+                                  MediaTek modified it to integrate it in this
+                                  example project.
     - \b inc/task_def.h:          Define the task stack size, queue length,
                                   project name, and priority for the
                                   application to create tasks.
@@ -98,11 +116,25 @@
     - \b GCC/mt7686_flash.ld:   Linker script.
     - \b GCC/startup_mt7686.s:  MT7686's startup file for GCC.
     - \b GCC/syscalls.c:        The minimal implementation of the system calls.
-
+  - Project configuration files using Keil
+    - \b MDK-ARM/nghttp2_client.uvprojx:
+                             uVision5 project file. Contains the project
+                             structure in XML format.
+    - \b MDK-ARM/flash.sct:  Linker script.
+  - Project configuration files using IAR
+    - \b EWARM/nghttp2_client.ewd:
+                           IAR project options. Contains the settings for the
+                           debugger.
+    - \b EWARM/nghttp2_client.ewp:
+                           IAR project file. Contains the project structure in
+                           XML format.
+    - \b EWARM/nghttp2_client.eww:
+                           IAR workspace file. Contains project information.
+    - \b EWARM/flash.icf:  Linker script.
 
 @par Run the application
   - Build the application with the command, "./build.sh mt7686_hdk
-    houndify" from the SDK root folder and download the bin file to
+    nghttp2_client" from the SDK root folder and download the bin file to
     LinkIt 7686 development board.
   - Connect your board to the PC with a micro USB cable.
   - Run the application. The result is displayed in the log. "example project
