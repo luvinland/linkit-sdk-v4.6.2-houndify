@@ -1,6 +1,6 @@
 /* Copyright Statement:
  *
- * (C) 2005-2017 MediaTek Inc. All rights reserved.
+ * (C) 2005-2017 MediaTek Inc. & BSE Co., Ltd. All rights reserved.
  *
  * This software/firmware and related documentation ("MediaTek Software") are
  * protected under relevant copyright laws. The information contained herein
