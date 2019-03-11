@@ -19,7 +19,7 @@ void main(void)
   * sub-menu1
   
 
-> "hello" - writer -
+> "hello" - writter -
 
 name|ENG|MAT|KOR
 ---|---|---|---
