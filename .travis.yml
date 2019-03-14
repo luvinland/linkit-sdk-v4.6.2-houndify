@@ -1,4 +1,4 @@
-language: clang
+language: c
 branches:
   only:
     - master
