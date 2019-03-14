@@ -1,0 +1,4 @@
+language: clang
+branches:
+  only:
+    - master
