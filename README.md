@@ -1,6 +1,4 @@
-{:target="_blank"}
-
-# LinkIt_SDK_V4.6.2_HOUNDIFY [![Build Status](https://travis-ci.org/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY.svg?branch=master)](https://travis-ci.org/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY){:target="_blank"} [![GitHub release](https://img.shields.io/github/release/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY.svg)](https://github.com/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY/releases) 
+# LinkIt_SDK_V4.6.2_HOUNDIFY [![Build Status](https://travis-ci.org/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY.svg?branch=master)](https://travis-ci.org/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY) [![GitHub release](https://img.shields.io/github/release/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY.svg)](https://github.com/luvinland/LinkIt_SDK_V4.6.2_HOUNDIFY/releases) 
 
 
 ## Overview
